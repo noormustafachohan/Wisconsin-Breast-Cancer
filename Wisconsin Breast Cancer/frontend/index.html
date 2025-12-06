@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Breast Cancer Prediction — Doctor Input</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Breast Cancer Prediction</h1>
+      <p>Enter patient feature values below (all 30 features) and click Predict.</p>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <form id="predictForm">
+          <div id="inputsGrid"></div>
+
+          <div class="buttons">
+            <button id="predictBtn" type="submit">Predict</button>
+            <button id="saveBtn" type="button">Save Entry</button>
+            <button id="clearBtn" type="button">Clear</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="result-section">
+        <h2>Result</h2>
+        <div id="resultBox">
+          <p><strong>Prediction:</strong> <span id="predictionText">—</span></p>
+          <p><strong>Confidence / Score:</strong> <span id="predictionScore">—</span></p>
+        </div>
+      </section>
+
+      <section class="history-section">
+        <h2>Saved Entries</h2>
+        <table id="historyTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Patient</th>
+              <th>Prediction</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <small>Make sure your backend is running at <code>http://127.0.0.1:5000</code></small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
